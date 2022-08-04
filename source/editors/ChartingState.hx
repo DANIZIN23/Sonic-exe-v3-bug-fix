@@ -55,22 +55,15 @@ import sys.FileSystem;
 import flash.media.Sound;
 #end
 
-using StringTools;
-
-@:access(flixel.system.FlxSound._sound)
-@:access(openfl.media.Sound.__buffer)
-
-class ChartingState extends MusicBeatState
-{
+using StringTools
 	public static var noteTypeList:Array<String> = //Used for backwards compatibility with 0.1 - 0.3.2 charts, though, you should add your hardcoded custom note types here too.
-	[
-		'',
+		'Static_Note',
 		'Alt Animation',
 		'Hey!',
 		'Hurt Note',
 		'GF Sing',
 		'No Animation'
-	];
+	'Phantom_Note',
 	private var noteTypeIntMap:Map<Int, String> = new Map<Int, String>();
 	private var noteTypeMap:Map<String, Null<Int>> = new Map<String, Null<Int>>();
 	private var didAThing = false;
